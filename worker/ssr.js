@@ -14,7 +14,8 @@ async function handleSsr(url) {
       fetch: (...args) => fetch(...args),
     }
     let content = ''
-    const onPagePrerender = async (filePath, fileContent, pageContext) => {
+    const onPagePrerender = async (pageContext) => {
+      const { filePath, fileContent } = pageContext._prerenderResult
       content += '<div><b>' + filePath + '</b><pre style="color: #aaa">'
       content += escapeHtml(fileContent)
       content += '\n'
