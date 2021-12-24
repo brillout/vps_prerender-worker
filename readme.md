@@ -18,7 +18,7 @@ To run the example:
    ```
    To develop the worker with Miniflare:
    ```bash
-   npm run dev:miniflare
+   npm run dev
    ```
    To build and try the production worker locally:
    ```bash
